@@ -12,7 +12,7 @@ interface PromotionDisplay {
 }
 export function useComputeProduct(product: Product): ComputedProduct {
   return useMemo<ComputedProduct>(() => {
-    let displayImage = '/public/images/Thumbnail.png'
+    let displayImage = '/static/images/Thumbnail.png'
     if (product.images.length > 0) {
       const priorityImages = product.images.sort((a, b) => a.priority - b.priority)
       displayImage = priorityImages[0].url

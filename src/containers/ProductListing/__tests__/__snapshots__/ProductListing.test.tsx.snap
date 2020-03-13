@@ -80,8 +80,8 @@ Array [
       onClick={[Function]}
     >
       <img
-        src="/public/images/ArrowBackWhite.png"
-        srcSet="/public/images/ArrowBackWhite@2x.png 2x, /public/images/ArrowBackWhite@3x.png 3x"
+        src="/static/images/ArrowBackWhite.png"
+        srcSet="/static/images/ArrowBackWhite@2x.png 2x, /static/images/ArrowBackWhite@3x.png 3x"
       />
     </button>
     <div
@@ -91,8 +91,8 @@ Array [
         className="c3"
       >
         <img
-          src="/public/images/Search.png"
-          srcSet="/public/images/Search@2x.png 2x, /public/images/Search@3x.png 3x"
+          src="/static/images/Search.png"
+          srcSet="/static/images/Search@2x.png 2x, /static/images/Search@3x.png 3x"
         />
       </div>
       <input

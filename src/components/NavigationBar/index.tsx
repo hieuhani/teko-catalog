@@ -56,7 +56,7 @@ export const NavigationBar: React.FunctionComponent<NavigationBarProps> = ({ chi
   return (
     <Container variant={variant!}>
       <BackIconWrapper onClick={() => dispatch({ type: 'POP' })}>
-        <img src={`/public/images/${arrowBackImage}.png`} srcSet={`/public/images/${arrowBackImage}@2x.png 2x, /public/images/${arrowBackImage}@3x.png 3x`} />
+        <img src={`/static/images/${arrowBackImage}.png`} srcSet={`/static/images/${arrowBackImage}@2x.png 2x, /static/images/${arrowBackImage}@3x.png 3x`} />
       </BackIconWrapper>
       {children}
       {rightNode}

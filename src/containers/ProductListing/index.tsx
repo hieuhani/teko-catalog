@@ -65,7 +65,7 @@ export const ProductListing: React.FunctionComponent = () => {
       <NavigationBar>
         <InputWrapper>
           <SearchIconWrapper>
-            <img src="/public/images/Search.png" srcSet="/public/images/Search@2x.png 2x, /public/images/Search@3x.png 3x" />
+            <img src="/static/images/Search.png" srcSet="/static/images/Search@2x.png 2x, /static/images/Search@3x.png 3x" />
           </SearchIconWrapper>
           <Input
             placeholder="Nhập tên, mã sản phẩm"

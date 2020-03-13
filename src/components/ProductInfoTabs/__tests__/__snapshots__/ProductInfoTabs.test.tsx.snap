@@ -147,8 +147,8 @@ exports[`ProductInfoTabs ProductInfoTabs renders correctly 1`] = `
       nhiều hơn
        
       <img
-        src="/public/images/ChevronDown.png"
-        srcSet="/public/images/ChevronDown@2x.png 2x, /public/images/ChevronDown@3x.png 3x"
+        src="/static/images/ChevronDown.png"
+        srcSet="/static/images/ChevronDown@2x.png 2x, /static/images/ChevronDown@3x.png 3x"
       />
     </button>
   </div>

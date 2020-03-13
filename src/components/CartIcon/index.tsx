@@ -30,7 +30,7 @@ const Amount = styled.span`
 
 export const CartIcon: React.FunctionComponent<CartIconProps> = ({ totalItems }: CartIconProps) => (
   <BackIconWrapper>
-    <img src="/public/images/CartOutlined.png" srcSet="/public/images/CartOutlined@2x.png 2x, /public/images/CartOutlined@3x.png 3x" />
+    <img src="/static/images/CartOutlined.png" srcSet="/static/images/CartOutlined@2x.png 2x, /static/images/CartOutlined@3x.png 3x" />
     {(totalItems > 0) && (
       <Amount>{totalItems}</Amount>
     )}

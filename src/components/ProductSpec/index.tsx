@@ -93,7 +93,7 @@ export const ProductSpec: React.FunctionComponent<ProductSpecProps> = ({ attribu
         </Table>
       </Wrapper>
       <Button full={full} onClick={() => setFull(prevState => !prevState)}>
-        Hiển thị {full ? 'bớt đi' : 'nhiều hơn'} <img src="/public/images/ChevronDown.png" srcSet="/public/images/ChevronDown@2x.png 2x, /public/images/ChevronDown@3x.png 3x" />
+        Hiển thị {full ? 'bớt đi' : 'nhiều hơn'} <img src="/static/images/ChevronDown.png" srcSet="/static/images/ChevronDown@2x.png 2x, /static/images/ChevronDown@3x.png 3x" />
       </Button>
     </Container>
   )

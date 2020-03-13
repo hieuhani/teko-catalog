@@ -29,7 +29,7 @@ describe('NavigationBar', () => {
         </NavigationBar>
       </ThemeProvider>
     )
-    expect(container.querySelector('img')).toHaveAttribute('src', '/public/images/ArrowBackWhite.png')
+    expect(container.querySelector('img')).toHaveAttribute('src', '/static/images/ArrowBackWhite.png')
   })
 
   test('NavigationBar with primary secondary', () => {
@@ -40,6 +40,6 @@ describe('NavigationBar', () => {
         </NavigationBar>
       </ThemeProvider>
     )
-    expect(container.querySelector('img')).toHaveAttribute('src', '/public/images/ArrowBackBlack.png')
+    expect(container.querySelector('img')).toHaveAttribute('src', '/static/images/ArrowBackBlack.png')
   })
 })

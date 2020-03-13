@@ -45,8 +45,8 @@ exports[`NavigationBar NavigationBar renders correctly 1`] = `
     onClick={[Function]}
   >
     <img
-      src="/public/images/ArrowBackWhite.png"
-      srcSet="/public/images/ArrowBackWhite@2x.png 2x, /public/images/ArrowBackWhite@3x.png 3x"
+      src="/static/images/ArrowBackWhite.png"
+      srcSet="/static/images/ArrowBackWhite@2x.png 2x, /static/images/ArrowBackWhite@3x.png 3x"
     />
   </button>
   Children

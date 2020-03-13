@@ -50,7 +50,7 @@ module.exports = (env, argv) => {
         template: './src/index.html',
       }),
       new CopyPlugin([
-        { from: './src/public', to: 'public' },
+        { from: './src/public', to: '' },
       ]),
       isEnvProduction &&
         new MiniCssExtractPlugin({

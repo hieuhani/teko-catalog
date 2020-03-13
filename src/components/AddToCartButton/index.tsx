@@ -30,7 +30,7 @@ const Button = styled.button`
 export const AddToCartButton: React.FunctionComponent<AddToCartButtonProps> = ({ cartState, onClick }: AddToCartButtonProps) => {
   return (
     <Button onClick={onClick}>
-      <img src="/public/images/AddToCart.png" srcSet="/public/images/AddToCart@2x.png 2x, /public/images/AddToCart@3x.png 3x" />
+      <img src="/static/images/AddToCart.png" srcSet="/static/images/AddToCart@2x.png 2x, /static/images/AddToCart@3x.png 3x" />
       {cartState.totalValue > 0 ? (
         <span>{thoundsandDelimiter(cartState.totalValue)}<Sup>đ</Sup></span>
       ) : (

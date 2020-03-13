@@ -26,13 +26,13 @@ export const Stepper: React.FunctionComponent<StepperProps> = ({ increase, value
   return (
     <Container>
       <Button onClick={decrease}>
-        <img src="/public/images/RemoveCircle.png" srcSet="/public/images/RemoveCircle@2x.png 2x, /public/images/RemoveCircle@3x.png 3x" />
+        <img src="/static/images/RemoveCircle.png" srcSet="/static/images/RemoveCircle@2x.png 2x, /static/images/RemoveCircle@3x.png 3x" />
       </Button>
       <Value>
         {value}
       </Value>
       <Button onClick={increase}>
-        <img src="/public/images/AddCircle.png" srcSet="/public/images/AddCircle@2x.png 2x, /public/images/AddCircle@3x.png 3x" />
+        <img src="/static/images/AddCircle.png" srcSet="/static/images/AddCircle@2x.png 2x, /static/images/AddCircle@3x.png 3x" />
       </Button>
     </Container>
   )
