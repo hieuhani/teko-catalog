@@ -1,7 +1,10 @@
 const path = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
+const ManifestPlugin = require('webpack-manifest-plugin')
+const WorkboxWebpackPlugin = require('workbox-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
 
 module.exports = (env, argv) => {
   const webpackEnv = argv.mode
@@ -50,7 +53,7 @@ module.exports = (env, argv) => {
         template: './src/index.html',
       }),
       new CopyPlugin([
-        { from: './src/public', to: '' },
+        { from: './src/public', to: '', ignore: ['.DS_Store'] },
       ]),
       isEnvProduction &&
         new MiniCssExtractPlugin({
@@ -59,6 +62,29 @@ module.exports = (env, argv) => {
           filename: 'static/css/[name].[contenthash:8].css',
           chunkFilename: 'static/css/[name].[contenthash:8].chunk.css',
         }),
+        new ManifestPlugin({
+          fileName: 'asset-manifest.json',
+          publicPath: '/',
+          generate: (seed, files, entrypoints) => {
+            const manifestFiles = files.reduce((manifest, file) => {
+              manifest[file.name] = file.path;
+              return manifest;
+            }, seed)
+            const entrypointFiles = entrypoints.main.filter(
+              fileName => !fileName.endsWith('.map')
+            )
+            return {
+              files: manifestFiles,
+              entrypoints: entrypointFiles,
+            };
+          },
+        }),
+        isEnvProduction &&
+          new WorkboxWebpackPlugin.GenerateSW({
+            clientsClaim: true,
+            exclude: [/\.map$/, /asset-manifest\.json$/],
+            navigateFallback: '/index.html',
+          }),
     ].filter(Boolean),
   }
 }
