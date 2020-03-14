@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "apisauce": "^1.1.1",
+    "localforage": "^1.7.3",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
     "react": "^16.13.0",
