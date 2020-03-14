@@ -1,6 +1,14 @@
 import { useEffect, RefObject, useCallback } from 'react'
 import throttle from 'lodash.throttle'
 
+export interface ScrollEvent {
+  target: {
+    scrollHeight: number;
+    scrollTop: number;
+    clientHeight: number;
+  };
+}
+
 export function useElementScroll(
   ref: RefObject<Element> | null,
   callback: (event: Event) => void,

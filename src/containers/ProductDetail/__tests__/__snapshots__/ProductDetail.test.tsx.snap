@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`SimilarProducts SimilarProducts renders correctly 1`] = `
+exports[`ProductDetail ProductDetail renders correctly 1`] = `
 .c0 {
   height: 44pt;
   background: #FFF;
@@ -77,4 +77,17 @@ exports[`SimilarProducts SimilarProducts renders correctly 1`] = `
     />
   </button>
 </div>
+`;
+
+exports[`styled Wrapper styled Wrapper renders background-color correctly 1`] = `
+.c0 {
+  overflow-y: auto;
+  height: calc(100% - 44pt);
+  background-color: #eef1f3;
+  padding-bottom: 50pt;
+}
+
+<div
+  className="c0"
+/>
 `;

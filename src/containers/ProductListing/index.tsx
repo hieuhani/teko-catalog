@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState, ChangeEvent } from 'react'
+import React, { useCallback, useEffect, useState, useRef, ChangeEvent } from 'react'
 import styled from 'styled-components'
 import debounce from 'lodash.debounce'
 import { search, ProductSearchParams, Product } from '../../repositories/products'
@@ -37,13 +37,16 @@ export const ProductListing: React.FunctionComponent = () => {
     _page: 1,
     q: '',
   })
+  const reachedEnd = useRef(false)
 
   const [isFetching, setIsFetching] = useState<boolean>(false)
   const [displayedProducts, setDisplayedProducts] = useState<Array<Product>>([])
   const loadData = useCallback(async () => {
     setIsFetching(true)
-    const { result } = await search(query)
+    const { result, extra } = await search(query)
     setDisplayedProducts(query._page === 1 ? result.products : displayedProducts.concat(result.products))
+    const lastPage = Math.ceil(extra.totalItems / extra.pageSize)
+    reachedEnd.current = (lastPage === query._page || result.products.length === 0)
     setIsFetching(false)
   }, [query])
 
@@ -55,6 +58,15 @@ export const ProductListing: React.FunctionComponent = () => {
       }
     })
   }, 500), [])
+
+  const onLoadMore = useCallback(() => {
+    if (!reachedEnd.current) {
+      setQuery(prevState => ({
+        ...prevState,
+        _page: prevState._page + 1,
+      }))
+    }
+  }, [])
 
   useEffect(() => {
     loadData()
@@ -77,12 +89,7 @@ export const ProductListing: React.FunctionComponent = () => {
       </NavigationBar>
       <ScrollContainer
         isFetching={isFetching}
-        onLoadMore={(): void => {
-          setQuery(prevState => ({
-            ...prevState,
-            _page: prevState._page + 1,
-          }))
-        }}
+        onLoadMore={onLoadMore}
       >
         {displayedProducts.map(product => (
           <ProductRow

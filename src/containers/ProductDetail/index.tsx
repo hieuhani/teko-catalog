@@ -15,7 +15,7 @@ interface ProductDetailProps {
   sku: string;
 }
 
-const Wrapper = styled.div`
+export const Wrapper = styled.div`
   overflow-y: auto;
   height: calc(100% - 44pt);
   background-color: ${props => props.theme.colors.paleGrey};
