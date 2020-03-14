@@ -19,8 +19,10 @@ This project tends to use as less dependencies as possible.
   <dt>Mobile slider</dt>
   <dd>Use `swiperjs` to implement mobile touch slider.</dd>
 
-  <dt>Static checking</dt>
-  <dd>Using Typescript to do catch types and type errors, do static test in testing trophy.</dd>
+  <dt>Testing</dt>
+  <dd>
+  Using Typescript to do catch types and type errors for static test. Unit tests and integration snapshot tests with Jest.
+  </dd>
 
   <dt>Code quality</dt>
   <dd>ESLint and Prettier are used to make sure code quality.</dd>
@@ -32,12 +34,12 @@ This project tends to use as less dependencies as possible.
   <dd>Use `lodash.debounce` for handling keyword enter and window sizing handler. Use `lodash.throttle` for handing infinite scrolling. Use `localforage` for IndexedDB wrapper.</dd>
 </dl>
 
-
-
-
-
 ## Quick start
 
 1.  Clone this repo using `git clone https://github.com/hieuhani/teko.git`
 2.  Run `yarn install` to install dependencies
 3.  Run `yarn test` to verify
+
+Service worker is only generated in production build, to verify:
+1. Run `yarn build`, static contents go to `dist` folder.
+2. Use a web to serve static contents in `dist` folder. [http-static](https://www.npmjs.com/package/http-static) may be used.
