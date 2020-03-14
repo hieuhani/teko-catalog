@@ -5,7 +5,7 @@ import { AddToCartButton } from '../AddToCartButton'
 import { CartState, useCartDispatch } from '../../contexts/cart'
 import { Product } from '../../repositories/products'
 
-interface AddToCartBarProps {
+export interface AddToCartBarProps {
   cartState: CartState;
   product: Product;
 }

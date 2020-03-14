@@ -21,6 +21,7 @@ const product: Product = {
     terminal: 'phongvu',
     finalPrice: 11890000,
     bestPrice: 11890000,
+    promotionPrice: 5000000,
   }],
   price: {
     supplierSalePrice: 11890000,
@@ -41,4 +42,30 @@ describe('ProductInfo', () => {
     expect(tree).toMatchSnapshot()
   })
 
+  test('ProductInfo renders correctly when sale status is not valid', () => {
+    const invalidSaleStatusProduct = Object.assign({}, product, {
+      status: {
+        publish: true,
+        sale: 'invalid_status',
+      },
+    })
+    const tree = renderer.create(
+      <ThemeProvider theme={theme}>
+        <ProductInfo product={invalidSaleStatusProduct} />
+      </ThemeProvider>
+    ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+
+  test('ProductInfo renders correctly when there are no promotion', () => {
+    const noPromotionProduct = Object.assign({}, product, {
+      promotionPrices: [],
+    })
+    const tree = renderer.create(
+      <ThemeProvider theme={theme}>
+        <ProductInfo product={noPromotionProduct} />
+      </ThemeProvider>
+    ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
 })

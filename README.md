@@ -1,4 +1,4 @@
-# [Product discovery](https://teko.now.sh/) &middot; [![CircleCI Status](https://circleci.com/gh/hieuhani/teko.svg?style=svg)](https://github.com/hieuhani/teko) [![Known Vulnerabilities](https://snyk.io/test/github/hieuhani/teko/badge.svg?targetFile=package.json)](https://snyk.io/test/github/hieuhani/teko?targetFile=package.json) ![GitHub top language](https://img.shields.io/github/languages/top/hieuhani/teko)
+# [Product discovery](https://teko.now.sh/) &middot; [![CircleCI Status](https://circleci.com/gh/hieuhani/teko.svg?style=svg)](https://github.com/hieuhani/teko) [![Known Vulnerabilities](https://snyk.io/test/github/hieuhani/teko/badge.svg?targetFile=package.json)](https://snyk.io/test/github/hieuhani/teko?targetFile=package.json) ![GitHub top language](https://img.shields.io/github/languages/top/hieuhani/teko) [![codecov](https://codecov.io/gh/hieuhani/teko/branch/master/graph/badge.svg)](https://codecov.io/gh/hieuhani/teko)
 
 
 ## Introduction

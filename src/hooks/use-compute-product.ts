@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Product } from 'repositories/products'
+import { Product } from '../repositories/products'
 
 type ComputedProduct = Product & {
   displayImage: string;
@@ -22,7 +22,7 @@ export function useComputeProduct(product: Product): ComputedProduct {
       let promotionPrice = product.promotionPrices[0].promotionPrice
       let finalPrice = product.promotionPrices[0].finalPrice
       // TODO: Because I couldn't see promotion prices, for demo purpose I will randomly add promotion to the product.
-      if (process.env.NODE_ENV !== 'test') {
+      if (process.env.NODE_ENV === 'development') {
         if (Math.random() >= 0.5) {
           const fakeDicount = (finalPrice * .25)
           promotionPrice = finalPrice

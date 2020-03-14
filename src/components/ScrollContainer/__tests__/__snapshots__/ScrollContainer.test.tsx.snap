@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScrollContainer ScrollContainer renders correctly 1`] = `
+.c0 {
+  overflow-y: auto;
+  height: calc(100% - 44pt);
+}
+
+<div
+  className="c0"
+>
+  Children
+  <p>
+    Fetching
+  </p>
+</div>
+`;

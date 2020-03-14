@@ -1,0 +1,110 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductSpec ProductSpec renders correctly 1`] = `
+.c0 {
+  padding: 12pt;
+}
+
+.c2 {
+  width: 100%;
+}
+
+.c2 tr td {
+  padding: 8pt;
+}
+
+.c2 tr td:last-child {
+  text-align: right;
+}
+
+.c2 tr:nth-child(odd) {
+  background: rgb(238,241,243);
+}
+
+.c2 tr:first-child td:first-child {
+  border-top-left-radius: 8pt;
+}
+
+.c2 tr:first-child td:last-child {
+  border-top-right-radius: 8pt;
+}
+
+.c2 tr:last-child td:first-child {
+  border-bottom-left-radius: 8pt;
+}
+
+.c2 tr:last-child td:last-child {
+  border-bottom-right-radius: 8pt;
+}
+
+.c1 {
+  max-height: 150pt;
+  overflow: hidden;
+  position: relative;
+}
+
+.c1:after {
+  position: absolute;
+  height: 80pt;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: ' ';
+  background: rgb(255,255,255);
+  background: linear-gradient(0deg,rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+.c3 {
+  width: 100%;
+  background-color: #FFF;
+  color: #1e75f6;
+  border: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <table
+      className="c2"
+    >
+      <tbody>
+        <tr>
+          <td>
+            Fake name
+          </td>
+          <td>
+            Fake value
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <button
+    className="c3"
+    onClick={[Function]}
+  >
+    Hiển thị 
+    nhiều hơn
+     
+    <img
+      src="/static/images/ChevronDown.png"
+      srcSet="/static/images/ChevronDown@2x.png 2x, /static/images/ChevronDown@3x.png 3x"
+    />
+  </button>
+</div>
+`;

@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ProductImages ProductImages renders correctly 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #FFF;
+}
+
+.c1 {
+  max-width: 330pt;
+}
+
+.c1 img {
+  width: 100%;
+}
+
+<div
+  className="swiper-container"
+>
+  <div
+    className="swiper-wrapper"
+  >
+    <div
+      className="c0 swiper-slide"
+    >
+      <div
+        className="c1"
+      >
+        <img
+          src="testurl"
+        />
+      </div>
+    </div>
+  </div>
+  <div
+    className="swiper-pagination"
+  />
+</div>
+`;

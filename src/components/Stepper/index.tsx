@@ -24,7 +24,7 @@ color: ${props => props.theme.colors.darkGrey};
 
 export const Stepper: React.FunctionComponent<StepperProps> = ({ increase, value, decrease }: StepperProps) => {
   return (
-    <Container>
+    <Container data-testid="stepper">
       <Button onClick={decrease}>
         <img src="/static/images/RemoveCircle.png" srcSet="/static/images/RemoveCircle@2x.png 2x, /static/images/RemoveCircle@3x.png 3x" />
       </Button>

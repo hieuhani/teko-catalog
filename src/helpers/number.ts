@@ -1,4 +1,4 @@
-export function thoundsandDelimiter(number: number): string {
+export function thoundsandDelimiter(number?: number): string {
   if (!number) {
     return ''
   }

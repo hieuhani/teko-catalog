@@ -45,8 +45,6 @@ export function navigationReducer(state: State, action: Action): State {
         ...state,
         stack: state.stack.length > 1 ? state.stack.filter((_, index) => index !== state.stack.length - 1) : initialState.stack
       }
-    default:
-      throw new Error()
   }
 }
 

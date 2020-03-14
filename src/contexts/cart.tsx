@@ -70,8 +70,6 @@ export function cartReducer(state: State, action: Action): State {
         cart,
       }
     }
-    default:
-      throw new Error()
   }
 }
 

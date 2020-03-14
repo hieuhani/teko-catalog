@@ -1,11 +1,12 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
+import { render } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import { AddToCartBar } from '..'
+import { AddToCartBar, AddToCartBarProps } from '..'
 import { theme } from '../../../theme'
 import { CartProvider } from '../../../contexts/cart'
 
-const props = {
+const props: AddToCartBarProps = {
   cartState: {
     cart: {},
     totalItems: 0,
@@ -47,5 +48,28 @@ describe('AddToCartBar', () => {
       </ThemeProvider>
     ).toJSON()
     expect(tree).toMatchSnapshot()
+  })
+
+  test('AddToCartBar renders Stepper when current cart is not null', () => {
+    const propsWithCartState = Object.assign({}, props, {
+      cartState: {
+        cart: {
+          [props.product.sku]: {
+            quantity: 1,
+            price: props.product.price,
+          },
+        },
+        totalItems: 0,
+        totalValue: 0,
+      }
+    })
+    const { getByTestId } = render(
+      <ThemeProvider theme={theme}>
+        <CartProvider>
+          <AddToCartBar {...propsWithCartState} />
+        </CartProvider>
+      </ThemeProvider>
+    )
+    expect(getByTestId('stepper')).toBeDefined()
   })
 })

@@ -1,4 +1,4 @@
-import { navigationReducer, State, Action } from '../navigation'
+import { navigationReducer, State, Action, useNavigationState } from '../navigation'
 
 const initialState: State = {
   stack: [{
@@ -30,11 +30,29 @@ describe('navigationReducer', () => {
   })
 
   test('dispatch POP to navigationReducer', () => {
-    const pushAction: Action = {
+    const popAction: Action = {
       type: 'POP',
     }
-    const newState = navigationReducer(initialState, pushAction)
-    expect(newState).toEqual({
+    const pushAction: Action = {
+      type: 'PUSH',
+      payload: {
+        name: 'PRODUCT_DETAIL',
+        payload: {
+          sku: '1020020',
+        },
+      },
+    }
+    const firstState = navigationReducer(initialState, pushAction)
+
+    const secondState = navigationReducer(firstState, popAction)
+    expect(secondState).toEqual({
+      stack: [{
+        name: 'PRODUCT_LISTING',
+      }]
+    })
+
+    const thirdState = navigationReducer(secondState, popAction)
+    expect(thirdState).toEqual({
       stack: [{
         name: 'PRODUCT_LISTING',
       }]

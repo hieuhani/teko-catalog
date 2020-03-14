@@ -6,6 +6,149 @@ exports[`ProductRow ProductRow renders correctly 1`] = `
   left: .1em;
 }
 
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  padding-left: 6pt;
+}
+
+.c8 span {
+  color: #FFF;
+  background: rgb(232,32,32);
+  background: linear-gradient(90deg,rgba(232,32,32,1) 0%,#f5471e 100%);
+  padding: 2pt 2pt 2pt 0;
+  border-top-right-radius: 2pt;
+  border-bottom-right-radius: 2pt;
+  font-size: 0.8rem;
+  margin-left: -6pt;
+  z-index: 1001;
+}
+
+.c8:before {
+  z-index: 1000;
+  content: ' ';
+  width: 12.3pt;
+  height: 12.3pt;
+  background: rgb(232,32,32);
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-bottom-left-radius: 2pt;
+}
+
+.c7 {
+  color: #8f9598;
+  -webkit-text-decoration: line-through;
+  text-decoration: line-through;
+}
+
+.c4 {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #ea341f;
+  margin-bottom: 0;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  background-color: #FFF;
+  border: 0;
+  box-shadow: 0 -1pt 0 0 #eef1f3 inset;
+  margin-bottom: 4pt;
+  padding: 12pt;
+}
+
+.c1 {
+  width: 80pt;
+  height: 80pt;
+}
+
+.c2 {
+  margin-left: 12pt;
+}
+
+.c3 {
+  font-size: 1rem;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<a
+  className="c0"
+  onClick={[Function]}
+>
+  <img
+    className="c1"
+    src="https://phongvu.vn/media/catalog_v2/media/48/18/1570775921.343882_Acer_AS_XC-885_1.jpg"
+  />
+  <div
+    className="c2"
+  >
+    <h3
+      className="c3"
+    >
+      Máy tính để bàn - PC Acer AS XC-885 (i5-8400/4GB/1TB HDD/UHD 630/Endless)
+    </h3>
+    <h3
+      className="c4"
+    >
+      11.890.000
+      <sup
+        className="c5"
+      >
+        đ
+      </sup>
+    </h3>
+    <div
+      className="c6"
+    >
+      <span
+        className="c7"
+      >
+        11.890.000
+      </span>
+      <div
+        className="c8"
+      >
+        <span>
+          -
+          58
+          %
+        </span>
+      </div>
+    </div>
+  </div>
+</a>
+`;
+
+exports[`ProductRow ProductRow renders correctly when there are no promotion 1`] = `
+.c5 {
+  top: -.3em;
+  left: .1em;
+}
+
 .c4 {
   font-weight: 700;
   font-size: 1rem;
