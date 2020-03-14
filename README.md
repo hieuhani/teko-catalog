@@ -3,13 +3,38 @@
 
 ## Introduction
 This project tends to use as less dependencies as possible.
-No state management or router library. Just built-in React features, Hooks and Context to achieve that.
-Using `styled-components` for styling and `react-spring` for animation.
-Using `swiperjs` to implement mobile touch slider.
-Using `lodash.debounce` for handling keyword enter and window sizing handler.
-Using `lodash.throttle` for handing infinite scrolling.
-Using Typescript to do catch types and type errors, static test in testing trophy.
-ESLint and Prettier are used to make sure code quality.
+<dl>
+  <dt>State management</dt>
+  <dd>No state management library, just build-in React context.</dd>
+
+  <dt>Router</dt>
+  <dd>No router library, use React useReducer hook and React context.</dd>
+
+  <dt>Styling</dt>
+  <dd>Use `bootstrap-reboot` for CSS normalize, and `styled-components` to style React components.</dd>
+
+  <dt>Animation</dt>
+  <dd>Use `react-spring` to build transition between screen.</dd>
+
+  <dt>Mobile slider</dt>
+  <dd>Use `swiperjs` to implement mobile touch slider.</dd>
+
+  <dt>Static checking</dt>
+  <dd>Using Typescript to do catch types and type errors, do static test in testing trophy.</dd>
+
+  <dt>Code quality</dt>
+  <dd>ESLint and Prettier are used to make sure code quality.</dd>
+
+  <dt>PWA support</dt>
+  <dd>Use WorkboxWebpackPlugin and ManifestPlugin to generate service worker to cache all static assets. Intercept `apisauce` to cache data by path and query string then save to IndexedDB.</dd>
+
+  <dt>Others</dt>
+  <dd>Use `lodash.debounce` for handling keyword enter and window sizing handler. Use `lodash.throttle` for handing infinite scrolling. Use `localforage` for IndexedDB wrapper.</dd>
+</dl>
+
+
+
+
 
 ## Quick start
 
