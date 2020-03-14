@@ -6,10 +6,14 @@ import { NavigationBar } from '../../components/NavigationBar'
 import { ScrollContainer } from '../../components/ScrollContainer'
 import { useNavigationDispatch } from '../../contexts/navigation'
 import ProductRow from '../../components/ProductRow'
+import { useIsOnline } from '../../hooks/use-is-online'
 
-const InputWrapper = styled.div`
+interface OnlineProps {
+  online: boolean;
+}
+const InputWrapper = styled.div<OnlineProps>`
   flex: 1;
-  background-color: ${props => props.theme.colors.white};
+  background-color: ${props => props.online ? props.theme.colors.white : props.theme.colors.paleGrey};
   border-radius: 8pt;
   height: 32pt;
   box-shadow: 0 2pt 4pt 0 ${props => props.theme.colors.black30};
@@ -18,11 +22,12 @@ const InputWrapper = styled.div`
   padding: 0 8pt;
 `
 
-const Input = styled.input`
+const Input = styled.input<OnlineProps>`
   border: 0;
   width: 100%;
   height: 100%;
   border-radius: 8pt;
+  background-color: ${props => props.online ? props.theme.colors.white : props.theme.colors.paleGrey};
   &:focus {
     outline: none;
   }
@@ -32,6 +37,7 @@ const SearchIconWrapper = styled.div`
   margin-right: 2pt;
 `
 export const ProductListing: React.FunctionComponent = () => {
+  const online = useIsOnline()
   const dispatch = useNavigationDispatch()
   const [query, setQuery] = useState<ProductSearchParams>({
     _page: 1,
@@ -75,12 +81,14 @@ export const ProductListing: React.FunctionComponent = () => {
   return (
     <>
       <NavigationBar>
-        <InputWrapper>
+        <InputWrapper online={online}>
           <SearchIconWrapper>
             <img src="/static/images/Search.png" srcSet="/static/images/Search@2x.png 2x, /static/images/Search@3x.png 3x" />
           </SearchIconWrapper>
           <Input
-            placeholder="Nhập tên, mã sản phẩm"
+            online={online}
+            disabled={!online}
+            placeholder={online ? 'Nhập tên, mã sản phẩm': 'Không có kết nối internet'}
             onChange={(e: ChangeEvent<HTMLInputElement>): void => {
               updateKeyword(e.target.value)
             }}
