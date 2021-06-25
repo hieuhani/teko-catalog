@@ -15,7 +15,7 @@
     "coverage": "jest --coverage"
   },
   "dependencies": {
-    "apisauce": "^1.1.1",
+    "apisauce": "^1.1.2",
     "localforage": "^1.7.3",
     "lodash.debounce": "^4.0.8",
     "lodash.throttle": "^4.1.1",
