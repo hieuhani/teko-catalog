@@ -9664,7 +9664,7 @@ snyk-try-require@^2.0.0:
     lodash.clonedeep "^4.3.0"
     lru-cache "^5.1.1"
 
-snyk@1.653.0, snyk@^1.653.0:
+snyk@^1.653.0:
   version "1.653.0"
   resolved "https://registry.yarnpkg.com/snyk/-/snyk-1.653.0.tgz#b48e387f970e6a9d5edd7d3629e6275d85b24144"
   integrity sha512-AFIsk1kgE9eQ+s31X9+b967us36UyHNes3VnHhgiVPX8YCq+uAPGNDV2rIaWDY/7c0yCtfOmFLD3mI5WxpJmdA==
@@ -10222,10 +10222,10 @@ supports-hyperlinks@^2.0.0:
     has-flag "^4.0.0"
     supports-color "^7.0.0"
 
-swiper@^6.5.1:
-  version "6.7.1"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.7.1.tgz#bfea8b9262a9898740dc64390ca681b131223fb7"
-  integrity sha512-r5Xr0WdQ7CuQiomb/8A+j9QsIl2ClQk5KoJU1jWp8/OP4OS/0ZJf5tKLWlJMPRHafy1oRsmv1lSSyzJad6XoRg==
+swiper@^6.8.0:
+  version "6.8.3"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.8.3.tgz#3eeb4628f7a803e04581c1ace588ba6b9780bb4b"
+  integrity sha512-1tpU2pqI/iUEfl2xg+7UBgwPQqTlFrm3Q9RKiphAAS+s0xUXRnHddAHifntTWAalcYR1AJwFUjv7hs0teyUYEw==
   dependencies:
     dom7 "^3.0.0"
     ssr-window "^3.0.0"
